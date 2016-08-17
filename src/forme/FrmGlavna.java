@@ -57,6 +57,9 @@ public class FrmGlavna extends javax.swing.JFrame {
     int poeniDomacin = 0;
     int poeniGost = 0;
 
+    int bonusDomaci = 0;
+    int bonusGosti = 0;
+
     /**
      * Creates new form FrmGlavna
      */
@@ -377,6 +380,10 @@ public class FrmGlavna extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jlblCetvrtina = new javax.swing.JLabel();
         jbtnSacuvaj = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jlblBonusDomacin = new javax.swing.JLabel();
+        jlblBonusGosti = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         jLabel3.setText("jLabel3");
 
@@ -403,8 +410,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jbtnD1P2.setText("P +2");
+        jbtnD1P2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnD1P2ActionPerformed(evt);
+            }
+        });
 
         jbtnD1P3.setText("P +3");
+        jbtnD1P3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnD1P3ActionPerformed(evt);
+            }
+        });
 
         jbtnD1PM.setText("P -1");
 
@@ -416,6 +433,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jbtnD1FM.setText("F -1");
+        jbtnD1FM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnD1FMActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Broj faulova:");
 
@@ -490,8 +512,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton69.setText("P +2");
+        jButton69.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton69ActionPerformed(evt);
+            }
+        });
 
         jButton70.setText("P +3");
+        jButton70.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton70ActionPerformed(evt);
+            }
+        });
 
         jButton71.setText("P -1");
 
@@ -503,6 +535,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton73.setText("F -1");
+        jButton73.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton73ActionPerformed(evt);
+            }
+        });
 
         jLabel16.setText("Broj faulova:");
 
@@ -577,8 +614,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton75.setText("P +2");
+        jButton75.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton75ActionPerformed(evt);
+            }
+        });
 
         jButton76.setText("P +3");
+        jButton76.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton76ActionPerformed(evt);
+            }
+        });
 
         jButton77.setText("P -1");
 
@@ -590,6 +637,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton79.setText("F -1");
+        jButton79.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton79ActionPerformed(evt);
+            }
+        });
 
         jLabel17.setText("Broj faulova:");
 
@@ -664,8 +716,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton153.setText("P +2");
+        jButton153.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton153ActionPerformed(evt);
+            }
+        });
 
         jButton154.setText("P +3");
+        jButton154.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton154ActionPerformed(evt);
+            }
+        });
 
         jButton155.setText("P -1");
 
@@ -677,6 +739,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton157.setText("F -1");
+        jButton157.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton157ActionPerformed(evt);
+            }
+        });
 
         jLabel30.setText("Broj faulova:");
 
@@ -751,8 +818,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton159.setText("P +2");
+        jButton159.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton159ActionPerformed(evt);
+            }
+        });
 
         jButton160.setText("P +3");
+        jButton160.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton160ActionPerformed(evt);
+            }
+        });
 
         jButton161.setText("P -1");
 
@@ -764,6 +841,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton163.setText("F -1");
+        jButton163.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton163ActionPerformed(evt);
+            }
+        });
 
         jLabel31.setText("Broj faulova:");
 
@@ -838,8 +920,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton165.setText("P +2");
+        jButton165.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton165ActionPerformed(evt);
+            }
+        });
 
         jButton166.setText("P +3");
+        jButton166.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton166ActionPerformed(evt);
+            }
+        });
 
         jButton167.setText("P -1");
 
@@ -851,6 +943,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton169.setText("F -1");
+        jButton169.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton169ActionPerformed(evt);
+            }
+        });
 
         jLabel32.setText("Broj faulova:");
 
@@ -925,8 +1022,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton171.setText("P +2");
+        jButton171.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton171ActionPerformed(evt);
+            }
+        });
 
         jButton172.setText("P +3");
+        jButton172.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton172ActionPerformed(evt);
+            }
+        });
 
         jButton173.setText("P -1");
 
@@ -938,6 +1045,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton175.setText("F -1");
+        jButton175.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton175ActionPerformed(evt);
+            }
+        });
 
         jLabel33.setText("Broj faulova:");
 
@@ -1012,8 +1124,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton177.setText("P +2");
+        jButton177.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton177ActionPerformed(evt);
+            }
+        });
 
         jButton178.setText("P +3");
+        jButton178.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton178ActionPerformed(evt);
+            }
+        });
 
         jButton179.setText("P -1");
 
@@ -1025,6 +1147,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton181.setText("F -1");
+        jButton181.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton181ActionPerformed(evt);
+            }
+        });
 
         jLabel34.setText("Broj faulova:");
 
@@ -1099,8 +1226,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton183.setText("P +2");
+        jButton183.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton183ActionPerformed(evt);
+            }
+        });
 
         jButton184.setText("P +3");
+        jButton184.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton184ActionPerformed(evt);
+            }
+        });
 
         jButton185.setText("P -1");
 
@@ -1112,6 +1249,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton187.setText("F -1");
+        jButton187.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton187ActionPerformed(evt);
+            }
+        });
 
         jLabel35.setText("Broj faulova:");
 
@@ -1186,8 +1328,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton189.setText("P +2");
+        jButton189.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton189ActionPerformed(evt);
+            }
+        });
 
         jButton190.setText("P +3");
+        jButton190.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton190ActionPerformed(evt);
+            }
+        });
 
         jButton191.setText("P -1");
 
@@ -1199,6 +1351,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton193.setText("F -1");
+        jButton193.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton193ActionPerformed(evt);
+            }
+        });
 
         jLabel36.setText("Broj faulova:");
 
@@ -1273,8 +1430,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton195.setText("P +2");
+        jButton195.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton195ActionPerformed(evt);
+            }
+        });
 
         jButton196.setText("P +3");
+        jButton196.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton196ActionPerformed(evt);
+            }
+        });
 
         jButton197.setText("P -1");
 
@@ -1286,6 +1453,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton199.setText("F -1");
+        jButton199.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton199ActionPerformed(evt);
+            }
+        });
 
         jLabel37.setText("Broj faulova:");
 
@@ -1360,8 +1532,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton201.setText("P +2");
+        jButton201.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton201ActionPerformed(evt);
+            }
+        });
 
         jButton202.setText("P +3");
+        jButton202.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton202ActionPerformed(evt);
+            }
+        });
 
         jButton203.setText("P -1");
 
@@ -1373,6 +1555,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton205.setText("F -1");
+        jButton205.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton205ActionPerformed(evt);
+            }
+        });
 
         jLabel38.setText("Broj faulova:");
 
@@ -1497,8 +1684,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton81.setText("P +2");
+        jButton81.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton81ActionPerformed(evt);
+            }
+        });
 
         jButton82.setText("P +3");
+        jButton82.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton82ActionPerformed(evt);
+            }
+        });
 
         jButton83.setText("P -1");
 
@@ -1510,6 +1707,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton85.setText("F -1");
+        jButton85.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton85ActionPerformed(evt);
+            }
+        });
 
         jLabel18.setText("Broj faulova:");
 
@@ -1584,8 +1786,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton87.setText("P +2");
+        jButton87.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton87ActionPerformed(evt);
+            }
+        });
 
         jButton88.setText("P +3");
+        jButton88.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton88ActionPerformed(evt);
+            }
+        });
 
         jButton89.setText("P -1");
 
@@ -1597,6 +1809,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton91.setText("F -1");
+        jButton91.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton91ActionPerformed(evt);
+            }
+        });
 
         jLabel19.setText("Broj faulova:");
 
@@ -1671,8 +1888,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton93.setText("P +2");
+        jButton93.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton93ActionPerformed(evt);
+            }
+        });
 
         jButton94.setText("P +3");
+        jButton94.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton94ActionPerformed(evt);
+            }
+        });
 
         jButton95.setText("P -1");
 
@@ -1684,6 +1911,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton97.setText("F -1");
+        jButton97.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton97ActionPerformed(evt);
+            }
+        });
 
         jLabel20.setText("Broj faulova:");
 
@@ -1758,8 +1990,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton99.setText("P +2");
+        jButton99.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton99ActionPerformed(evt);
+            }
+        });
 
         jButton100.setText("P +3");
+        jButton100.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton100ActionPerformed(evt);
+            }
+        });
 
         jButton101.setText("P -1");
 
@@ -1771,6 +2013,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton103.setText("F -1");
+        jButton103.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton103ActionPerformed(evt);
+            }
+        });
 
         jLabel21.setText("Broj faulova:");
 
@@ -1845,8 +2092,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton105.setText("P +2");
+        jButton105.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton105ActionPerformed(evt);
+            }
+        });
 
         jButton106.setText("P +3");
+        jButton106.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton106ActionPerformed(evt);
+            }
+        });
 
         jButton107.setText("P -1");
 
@@ -1858,6 +2115,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton109.setText("F -1");
+        jButton109.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton109ActionPerformed(evt);
+            }
+        });
 
         jLabel22.setText("Broj faulova:");
 
@@ -1932,8 +2194,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton111.setText("P +2");
+        jButton111.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton111ActionPerformed(evt);
+            }
+        });
 
         jButton112.setText("P +3");
+        jButton112.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton112ActionPerformed(evt);
+            }
+        });
 
         jButton113.setText("P -1");
 
@@ -1945,6 +2217,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton115.setText("F -1");
+        jButton115.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton115ActionPerformed(evt);
+            }
+        });
 
         jLabel23.setText("Broj faulova:");
 
@@ -2019,8 +2296,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton117.setText("P +2");
+        jButton117.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton117ActionPerformed(evt);
+            }
+        });
 
         jButton118.setText("P +3");
+        jButton118.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton118ActionPerformed(evt);
+            }
+        });
 
         jButton119.setText("P -1");
 
@@ -2032,6 +2319,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton121.setText("F -1");
+        jButton121.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton121ActionPerformed(evt);
+            }
+        });
 
         jLabel24.setText("Broj faulova:");
 
@@ -2106,8 +2398,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton123.setText("P +2");
+        jButton123.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton123ActionPerformed(evt);
+            }
+        });
 
         jButton124.setText("P +3");
+        jButton124.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton124ActionPerformed(evt);
+            }
+        });
 
         jButton125.setText("P -1");
 
@@ -2119,6 +2421,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton127.setText("F -1");
+        jButton127.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton127ActionPerformed(evt);
+            }
+        });
 
         jLabel25.setText("Broj faulova:");
 
@@ -2193,8 +2500,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton129.setText("P +2");
+        jButton129.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton129ActionPerformed(evt);
+            }
+        });
 
         jButton130.setText("P +3");
+        jButton130.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton130ActionPerformed(evt);
+            }
+        });
 
         jButton131.setText("P -1");
 
@@ -2206,6 +2523,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton133.setText("F -1");
+        jButton133.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton133ActionPerformed(evt);
+            }
+        });
 
         jLabel26.setText("Broj faulova:");
 
@@ -2280,8 +2602,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton135.setText("P +2");
+        jButton135.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton135ActionPerformed(evt);
+            }
+        });
 
         jButton136.setText("P +3");
+        jButton136.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton136ActionPerformed(evt);
+            }
+        });
 
         jButton137.setText("P -1");
 
@@ -2293,6 +2625,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton139.setText("F -1");
+        jButton139.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton139ActionPerformed(evt);
+            }
+        });
 
         jLabel27.setText("Broj faulova:");
 
@@ -2367,8 +2704,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton141.setText("P +2");
+        jButton141.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton141ActionPerformed(evt);
+            }
+        });
 
         jButton142.setText("P +3");
+        jButton142.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton142ActionPerformed(evt);
+            }
+        });
 
         jButton143.setText("P -1");
 
@@ -2380,6 +2727,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton145.setText("F -1");
+        jButton145.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton145ActionPerformed(evt);
+            }
+        });
 
         jLabel28.setText("Broj faulova:");
 
@@ -2454,8 +2806,18 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton147.setText("P +2");
+        jButton147.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton147ActionPerformed(evt);
+            }
+        });
 
         jButton148.setText("P +3");
+        jButton148.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton148ActionPerformed(evt);
+            }
+        });
 
         jButton149.setText("P -1");
 
@@ -2467,6 +2829,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton151.setText("F -1");
+        jButton151.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton151ActionPerformed(evt);
+            }
+        });
 
         jLabel29.setText("Broj faulova:");
 
@@ -2639,6 +3006,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         jtxtGost.setEditable(false);
         jtxtGost.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jtxtGost.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtGost.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtGostActionPerformed(evt);
+            }
+        });
 
         jlblPoeniDomacin.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jlblPoeniDomacin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2671,49 +3043,31 @@ public class FrmGlavna extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText("Faulovi:");
+
+        jlblBonusDomacin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlblBonusDomacin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlblBonusDomacin.setText("0");
+
+        jlblBonusGosti.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlblBonusGosti.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlblBonusGosti.setText("0");
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setText("Faulovi:");
+
         javax.swing.GroupLayout jpnlCentarLayout = new javax.swing.GroupLayout(jpnlCentar);
         jpnlCentar.setLayout(jpnlCentarLayout);
         jpnlCentarLayout.setHorizontalGroup(
             jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlCentarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlCentarLayout.createSequentialGroup()
-                            .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jpnlCentarLayout.createSequentialGroup()
-                                    .addGap(41, 41, 41)
-                                    .addComponent(jlblMin, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jlblDveTacke, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jlblSec, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jpnlCentarLayout.createSequentialGroup()
-                                    .addComponent(jbtnPokreni)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jbtnZaustavi)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jbtnPlus)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jbtnMinus)))
-                            .addGap(88, 88, 88))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlCentarLayout.createSequentialGroup()
-                            .addComponent(jbtnSacuvaj, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(109, 109, 109)))
-                    .addGroup(jpnlCentarLayout.createSequentialGroup()
-                        .addComponent(jlblPoeniDomacin, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jlblPoeniGost, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(76, 76, 76))))
             .addGroup(jpnlCentarLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpnlCentarLayout.createSequentialGroup()
+                .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpnlCentarLayout.createSequentialGroup()
                         .addComponent(jtxtDomacin, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jtxtGost, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 42, Short.MAX_VALUE))
-                    .addGroup(jpnlCentarLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpnlCentarLayout.createSequentialGroup()
                         .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabel1)
@@ -2722,16 +3076,61 @@ public class FrmGlavna extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jpnlCentarLayout.createSequentialGroup()
-                                .addComponent(jlblCetvrtina, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlCentarLayout.createSequentialGroup()
                                 .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jtxtSala, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jpnlCentarLayout.createSequentialGroup()
                                         .addComponent(jtxtVreme)
                                         .addGap(18, 18, 18)
                                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(36, 36, 36))))))
+                                .addGap(36, 36, 36))
+                            .addGroup(jpnlCentarLayout.createSequentialGroup()
+                                .addComponent(jlblCetvrtina, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(jpnlCentarLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlblPoeniDomacin, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jlblPoeniGost, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80))))
+            .addGroup(jpnlCentarLayout.createSequentialGroup()
+                .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnlCentarLayout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addComponent(jbtnSacuvaj, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpnlCentarLayout.createSequentialGroup()
+                        .addGap(276, 276, 276)
+                        .addComponent(jtxtGost, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jpnlCentarLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jlblBonusDomacin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnPokreni, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnlCentarLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnZaustavi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnPlus)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnMinus)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlCentarLayout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jlblBonusGosti, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(70, 70, 70))))
+            .addGroup(jpnlCentarLayout.createSequentialGroup()
+                .addGap(146, 146, 146)
+                .addComponent(jlblMin, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jlblDveTacke, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jlblSec, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jpnlCentarLayout.setVerticalGroup(
             jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2760,7 +3159,13 @@ public class FrmGlavna extends javax.swing.JFrame {
                     .addComponent(jbtnZaustavi)
                     .addComponent(jbtnPlus)
                     .addComponent(jbtnMinus))
-                .addGap(44, 44, 44)
+                .addGap(65, 65, 65)
+                .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jlblBonusDomacin, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlblBonusGosti, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtxtDomacin, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtxtGost, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2768,7 +3173,7 @@ public class FrmGlavna extends javax.swing.JFrame {
                 .addGroup(jpnlCentarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlblPoeniDomacin, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jlblPoeniGost, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100)
+                .addGap(60, 60, 60)
                 .addComponent(jbtnSacuvaj, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2780,11 +3185,11 @@ public class FrmGlavna extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jpnlDomacin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(jpnlCentar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addGap(19, 19, 19)
                 .addComponent(jpnlGost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2801,7 +3206,7 @@ public class FrmGlavna extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        setBounds(0, 0, 1367, 1188);
+        setBounds(0, 0, 1366, 1188);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -2820,7 +3225,11 @@ public class FrmGlavna extends javax.swing.JFrame {
             jbtnMinus.setEnabled(false);
             iskljuciDugmice();
             cetvrtina++;
-            jlblCetvrtina.setText("" + cetvrtina);
+            if (cetvrtina > 4) {
+                jlblCetvrtina.setText("Produžetak " + (cetvrtina-4));
+            } else {
+                jlblCetvrtina.setText("" + cetvrtina);
+            }
             jtxtVreme.setText("");
 
         } catch (Exception e) {
@@ -3066,6 +3475,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD1Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(1);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jbtnD1F1ActionPerformed
 
     private void jButton84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton84ActionPerformed
@@ -3073,6 +3483,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG1.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(13);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton84ActionPerformed
 
     private void jButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton72ActionPerformed
@@ -3080,6 +3491,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD2Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(2);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton72ActionPerformed
 
     private void jButton78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton78ActionPerformed
@@ -3087,6 +3499,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD3Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(3);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton78ActionPerformed
 
     private void jButton156ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton156ActionPerformed
@@ -3094,6 +3507,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD4Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(4);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton156ActionPerformed
 
     private void jButton162ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton162ActionPerformed
@@ -3101,6 +3515,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD5Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(5);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton162ActionPerformed
 
     private void jButton168ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton168ActionPerformed
@@ -3108,6 +3523,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD6Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(6);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton168ActionPerformed
 
     private void jButton174ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton174ActionPerformed
@@ -3115,6 +3531,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD7Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(7);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton174ActionPerformed
 
     private void jButton180ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton180ActionPerformed
@@ -3122,6 +3539,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD8Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(8);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton180ActionPerformed
 
     private void jButton186ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton186ActionPerformed
@@ -3129,6 +3547,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD9Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(9);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton186ActionPerformed
 
     private void jButton192ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton192ActionPerformed
@@ -3136,6 +3555,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD10Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(10);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton192ActionPerformed
 
     private void jButton198ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton198ActionPerformed
@@ -3143,6 +3563,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD11Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(11);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton198ActionPerformed
 
     private void jButton204ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton204ActionPerformed
@@ -3150,6 +3571,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblD12Faulovi.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(12);
         }
+        dodajFaulDomacinu();
     }//GEN-LAST:event_jButton204ActionPerformed
 
     private void jButton90ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton90ActionPerformed
@@ -3157,6 +3579,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG2.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(14);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton90ActionPerformed
 
     private void jButton96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton96ActionPerformed
@@ -3164,6 +3587,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG3.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(15);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton96ActionPerformed
 
     private void jButton102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton102ActionPerformed
@@ -3171,6 +3595,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG4.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(16);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton102ActionPerformed
 
     private void jButton108ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton108ActionPerformed
@@ -3178,6 +3603,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG5.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(17);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton108ActionPerformed
 
     private void jButton114ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton114ActionPerformed
@@ -3185,6 +3611,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG6.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(18);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton114ActionPerformed
 
     private void jButton120ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton120ActionPerformed
@@ -3192,6 +3619,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG7.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(19);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton120ActionPerformed
 
     private void jButton126ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton126ActionPerformed
@@ -3199,6 +3627,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG8.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(20);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton126ActionPerformed
 
     private void jButton132ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton132ActionPerformed
@@ -3206,6 +3635,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG9.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(21);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton132ActionPerformed
 
     private void jButton138ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton138ActionPerformed
@@ -3213,6 +3643,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG10.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(22);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton138ActionPerformed
 
     private void jButton144ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton144ActionPerformed
@@ -3220,6 +3651,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG11.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(23);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton144ActionPerformed
 
     private void jButton150ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton150ActionPerformed
@@ -3227,7 +3659,300 @@ public class FrmGlavna extends javax.swing.JFrame {
         if (Integer.parseInt(jlblFauloviG12.getText()) == 5) {
             iskljuciDugmiceZaIzbacenogIgraca(24);
         }
+        dodajFaulGostu();
     }//GEN-LAST:event_jButton150ActionPerformed
+
+    private void jtxtGostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtGostActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxtGostActionPerformed
+
+    private void jButton91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton91ActionPerformed
+        smanjiFaul(jlblFauloviG2, 14);
+    }//GEN-LAST:event_jButton91ActionPerformed
+
+    private void jbtnD1FMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnD1FMActionPerformed
+        smanjiFaul(jlblD1Faulovi, 1);
+    }//GEN-LAST:event_jbtnD1FMActionPerformed
+
+    private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
+        smanjiFaul(jlblD2Faulovi, 2);
+    }//GEN-LAST:event_jButton73ActionPerformed
+
+    private void jButton79ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton79ActionPerformed
+        smanjiFaul(jlblD3Faulovi, 3);
+    }//GEN-LAST:event_jButton79ActionPerformed
+
+    private void jButton157ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton157ActionPerformed
+        smanjiFaul(jlblD4Faulovi, 4);
+    }//GEN-LAST:event_jButton157ActionPerformed
+
+    private void jButton163ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton163ActionPerformed
+        smanjiFaul(jlblD5Faulovi, 5);
+    }//GEN-LAST:event_jButton163ActionPerformed
+
+    private void jButton169ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton169ActionPerformed
+        smanjiFaul(jlblD6Faulovi, 6);
+    }//GEN-LAST:event_jButton169ActionPerformed
+
+    private void jButton175ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton175ActionPerformed
+        smanjiFaul(jlblD7Faulovi, 7);
+    }//GEN-LAST:event_jButton175ActionPerformed
+
+    private void jButton181ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton181ActionPerformed
+        smanjiFaul(jlblD8Faulovi, 8);
+    }//GEN-LAST:event_jButton181ActionPerformed
+
+    private void jButton187ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton187ActionPerformed
+        smanjiFaul(jlblD9Faulovi, 9);
+    }//GEN-LAST:event_jButton187ActionPerformed
+
+    private void jButton193ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton193ActionPerformed
+        smanjiFaul(jlblD10Faulovi, 10);
+    }//GEN-LAST:event_jButton193ActionPerformed
+
+    private void jButton199ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton199ActionPerformed
+        smanjiFaul(jlblD11Faulovi, 11);
+    }//GEN-LAST:event_jButton199ActionPerformed
+
+    private void jButton205ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton205ActionPerformed
+        smanjiFaul(jlblD12Faulovi, 12);
+    }//GEN-LAST:event_jButton205ActionPerformed
+
+    private void jButton85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton85ActionPerformed
+        smanjiFaul(jlblFauloviG1, 13);
+    }//GEN-LAST:event_jButton85ActionPerformed
+
+    private void jButton97ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton97ActionPerformed
+        smanjiFaul(jlblFauloviG3, 15);
+    }//GEN-LAST:event_jButton97ActionPerformed
+
+    private void jButton103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton103ActionPerformed
+        smanjiFaul(jlblFauloviG4, 16);
+    }//GEN-LAST:event_jButton103ActionPerformed
+
+    private void jButton109ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton109ActionPerformed
+        smanjiFaul(jlblFauloviG5, 17);
+    }//GEN-LAST:event_jButton109ActionPerformed
+
+    private void jButton115ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton115ActionPerformed
+        smanjiFaul(jlblFauloviG6, 18);
+    }//GEN-LAST:event_jButton115ActionPerformed
+
+    private void jButton121ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton121ActionPerformed
+        smanjiFaul(jlblFauloviG7, 19);
+    }//GEN-LAST:event_jButton121ActionPerformed
+
+    private void jButton127ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton127ActionPerformed
+        smanjiFaul(jlblFauloviG8, 20);
+    }//GEN-LAST:event_jButton127ActionPerformed
+
+    private void jButton133ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton133ActionPerformed
+        smanjiFaul(jlblFauloviG9, 21);
+    }//GEN-LAST:event_jButton133ActionPerformed
+
+    private void jButton139ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton139ActionPerformed
+        smanjiFaul(jlblFauloviG10, 22);
+    }//GEN-LAST:event_jButton139ActionPerformed
+
+    private void jButton145ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton145ActionPerformed
+        smanjiFaul(jlblFauloviG11, 23);
+    }//GEN-LAST:event_jButton145ActionPerformed
+
+    private void jButton151ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton151ActionPerformed
+        smanjiFaul(jlblFauloviG12, 24);
+    }//GEN-LAST:event_jButton151ActionPerformed
+
+    private void jbtnD1P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnD1P2ActionPerformed
+        dodajPoene(2,true, jlblD1Poeni);
+    }//GEN-LAST:event_jbtnD1P2ActionPerformed
+
+    private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
+        dodajPoene(2,true, jlblD2Poeni);
+    }//GEN-LAST:event_jButton69ActionPerformed
+
+    private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
+        dodajPoene(2,true, jlblD3Poeni);
+    }//GEN-LAST:event_jButton75ActionPerformed
+
+    private void jButton153ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton153ActionPerformed
+        dodajPoene(2,true, jlblD4Poeni);
+    }//GEN-LAST:event_jButton153ActionPerformed
+
+    private void jButton159ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton159ActionPerformed
+        dodajPoene(2,true, jlblD5Poeni);
+    }//GEN-LAST:event_jButton159ActionPerformed
+
+    private void jButton165ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton165ActionPerformed
+        dodajPoene(2,true, jlblD6Poeni);
+    }//GEN-LAST:event_jButton165ActionPerformed
+
+    private void jButton171ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton171ActionPerformed
+        dodajPoene(2,true, jlblD7Poeni);
+    }//GEN-LAST:event_jButton171ActionPerformed
+
+    private void jButton177ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton177ActionPerformed
+        dodajPoene(2,true, jlblD8Poeni);
+    }//GEN-LAST:event_jButton177ActionPerformed
+
+    private void jButton183ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton183ActionPerformed
+        dodajPoene(2,true, jlblD9Poeni);
+    }//GEN-LAST:event_jButton183ActionPerformed
+
+    private void jButton189ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton189ActionPerformed
+        dodajPoene(2,true, jlblD10Poeni);
+    }//GEN-LAST:event_jButton189ActionPerformed
+
+    private void jButton195ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton195ActionPerformed
+        dodajPoene(2,true, jlblD11Poeni);
+    }//GEN-LAST:event_jButton195ActionPerformed
+
+    private void jButton201ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton201ActionPerformed
+        dodajPoene(2,true, jlblD12Poeni);
+    }//GEN-LAST:event_jButton201ActionPerformed
+
+    private void jbtnD1P3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnD1P3ActionPerformed
+        dodajPoene(3,true, jlblD1Poeni);
+    }//GEN-LAST:event_jbtnD1P3ActionPerformed
+
+    private void jButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton70ActionPerformed
+        dodajPoene(3,true, jlblD2Poeni);
+    }//GEN-LAST:event_jButton70ActionPerformed
+
+    private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
+        dodajPoene(3,true, jlblD3Poeni);
+    }//GEN-LAST:event_jButton76ActionPerformed
+
+    private void jButton154ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton154ActionPerformed
+        dodajPoene(3,true, jlblD4Poeni);
+    }//GEN-LAST:event_jButton154ActionPerformed
+
+    private void jButton160ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton160ActionPerformed
+        dodajPoene(3,true, jlblD5Poeni);
+    }//GEN-LAST:event_jButton160ActionPerformed
+
+    private void jButton166ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton166ActionPerformed
+        dodajPoene(3,true, jlblD6Poeni);
+    }//GEN-LAST:event_jButton166ActionPerformed
+
+    private void jButton172ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton172ActionPerformed
+        dodajPoene(3,true, jlblD7Poeni);
+    }//GEN-LAST:event_jButton172ActionPerformed
+
+    private void jButton178ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton178ActionPerformed
+        dodajPoene(3,true, jlblD8Poeni);
+    }//GEN-LAST:event_jButton178ActionPerformed
+
+    private void jButton184ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton184ActionPerformed
+        dodajPoene(3,true, jlblD9Poeni);
+    }//GEN-LAST:event_jButton184ActionPerformed
+
+    private void jButton190ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton190ActionPerformed
+        dodajPoene(3,true, jlblD10Poeni);
+    }//GEN-LAST:event_jButton190ActionPerformed
+
+    private void jButton196ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton196ActionPerformed
+        dodajPoene(3,true, jlblD11Poeni);
+    }//GEN-LAST:event_jButton196ActionPerformed
+
+    private void jButton202ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton202ActionPerformed
+        dodajPoene(3,true, jlblD12Poeni);
+    }//GEN-LAST:event_jButton202ActionPerformed
+
+    private void jButton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton81ActionPerformed
+        dodajPoene(2,false, jlblPoeniG1);
+    }//GEN-LAST:event_jButton81ActionPerformed
+
+    private void jButton87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton87ActionPerformed
+        dodajPoene(2,false, jlblPoeniG2);
+    }//GEN-LAST:event_jButton87ActionPerformed
+
+    private void jButton93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton93ActionPerformed
+        dodajPoene(2,false, jlblPoeniG3);
+    }//GEN-LAST:event_jButton93ActionPerformed
+
+    private void jButton99ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton99ActionPerformed
+        dodajPoene(2,false, jlblPoeniG4);
+    }//GEN-LAST:event_jButton99ActionPerformed
+
+    private void jButton105ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton105ActionPerformed
+        dodajPoene(2,false, jlblPoeniG5);
+    }//GEN-LAST:event_jButton105ActionPerformed
+
+    private void jButton111ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton111ActionPerformed
+        dodajPoene(2,false, jlblPoeniG6);
+    }//GEN-LAST:event_jButton111ActionPerformed
+
+    private void jButton117ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton117ActionPerformed
+        dodajPoene(2,false, jlblPoeniG7);
+    }//GEN-LAST:event_jButton117ActionPerformed
+
+    private void jButton123ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton123ActionPerformed
+        dodajPoene(2,false, jlblPoeniG8);
+    }//GEN-LAST:event_jButton123ActionPerformed
+
+    private void jButton129ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton129ActionPerformed
+        dodajPoene(2,false, jlblPoeniG9);
+    }//GEN-LAST:event_jButton129ActionPerformed
+
+    private void jButton135ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton135ActionPerformed
+        dodajPoene(2,false, jlblPoeniG10);
+    }//GEN-LAST:event_jButton135ActionPerformed
+
+    private void jButton141ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton141ActionPerformed
+        dodajPoene(2,false, jlblPoeniG11);
+    }//GEN-LAST:event_jButton141ActionPerformed
+
+    private void jButton147ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton147ActionPerformed
+        dodajPoene(2,false, jlblPoeniG12);
+    }//GEN-LAST:event_jButton147ActionPerformed
+
+    private void jButton82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton82ActionPerformed
+        dodajPoene(3,false, jlblPoeniG1);
+    }//GEN-LAST:event_jButton82ActionPerformed
+
+    private void jButton88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton88ActionPerformed
+        dodajPoene(3,false, jlblPoeniG2);
+    }//GEN-LAST:event_jButton88ActionPerformed
+
+    private void jButton94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton94ActionPerformed
+        dodajPoene(3,false, jlblPoeniG3);
+    }//GEN-LAST:event_jButton94ActionPerformed
+
+    private void jButton100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton100ActionPerformed
+        dodajPoene(3,false, jlblPoeniG4);
+    }//GEN-LAST:event_jButton100ActionPerformed
+
+    private void jButton106ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton106ActionPerformed
+        dodajPoene(3,false, jlblPoeniG5);
+    }//GEN-LAST:event_jButton106ActionPerformed
+
+    private void jButton112ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton112ActionPerformed
+        dodajPoene(3,false, jlblPoeniG6);
+    }//GEN-LAST:event_jButton112ActionPerformed
+
+    private void jButton118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton118ActionPerformed
+        dodajPoene(3,false, jlblPoeniG7);
+    }//GEN-LAST:event_jButton118ActionPerformed
+
+    private void jButton124ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton124ActionPerformed
+        dodajPoene(3,false, jlblPoeniG8);
+    }//GEN-LAST:event_jButton124ActionPerformed
+
+    private void jButton130ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton130ActionPerformed
+        dodajPoene(3,false, jlblPoeniG9);
+    }//GEN-LAST:event_jButton130ActionPerformed
+
+    private void jButton136ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton136ActionPerformed
+        dodajPoene(3,false, jlblPoeniG10);
+    }//GEN-LAST:event_jButton136ActionPerformed
+
+    private void jButton142ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton142ActionPerformed
+        dodajPoene(3,false, jlblPoeniG11);
+    }//GEN-LAST:event_jButton142ActionPerformed
+
+    private void jButton148ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton148ActionPerformed
+        dodajPoene(3,false, jlblPoeniG12);
+    }//GEN-LAST:event_jButton148ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3431,6 +4156,8 @@ public class FrmGlavna extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbtnD1F1;
@@ -3445,6 +4172,8 @@ public class FrmGlavna extends javax.swing.JFrame {
     private javax.swing.JButton jbtnPokreni;
     private javax.swing.JButton jbtnSacuvaj;
     private javax.swing.JButton jbtnZaustavi;
+    private javax.swing.JLabel jlblBonusDomacin;
+    private javax.swing.JLabel jlblBonusGosti;
     private javax.swing.JLabel jlblCetvrtina;
     private javax.swing.JLabel jlblD1;
     private javax.swing.JLabel jlblD10;
@@ -3586,7 +4315,11 @@ public class FrmGlavna extends javax.swing.JFrame {
                     jbtnPlus.setEnabled(false);
                     jbtnMinus.setEnabled(false);
                     iskljuciDugmice();
-                    if (cetvrtina == 4) {
+                    bonusDomaci = 0;
+                    bonusGosti = 0;
+                    jlblBonusDomacin.setText("0");
+                    jlblBonusGosti.setText("0");
+                    if (cetvrtina >= 4 && poeniDomacin != poeniGost) {
                         jbtnSacuvaj.setVisible(true);
                         return;
                     }
@@ -3793,11 +4526,138 @@ public class FrmGlavna extends javax.swing.JFrame {
             dugme.setEnabled(true);
         }
 
+        if (Integer.parseInt(jlblD1Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(1);
+        }
+        if (Integer.parseInt(jlblD2Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(2);
+        }
+        if (Integer.parseInt(jlblD3Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(3);
+        }
+        if (Integer.parseInt(jlblD4Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(4);
+        }
+        if (Integer.parseInt(jlblD5Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(5);
+        }
+        if (Integer.parseInt(jlblD6Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(6);
+        }
+        if (Integer.parseInt(jlblD7Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(7);
+        }
+        if (Integer.parseInt(jlblD8Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(8);
+        }
+        if (Integer.parseInt(jlblD9Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(9);
+        }
+        if (Integer.parseInt(jlblD10Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(10);
+        }
+        if (Integer.parseInt(jlblD11Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(11);
+        }
+        if (Integer.parseInt(jlblD12Faulovi.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(12);
+        }
+        if (Integer.parseInt(jlblFauloviG1.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(13);
+        }
+        if (Integer.parseInt(jlblFauloviG2.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(14);
+        }
+        if (Integer.parseInt(jlblFauloviG3.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(15);
+        }
+        if (Integer.parseInt(jlblFauloviG4.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(16);
+        }
+        if (Integer.parseInt(jlblFauloviG5.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(17);
+        }
+        if (Integer.parseInt(jlblFauloviG6.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(18);
+        }
+        if (Integer.parseInt(jlblFauloviG7.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(19);
+        }
+        if (Integer.parseInt(jlblFauloviG8.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(20);
+        }
+        if (Integer.parseInt(jlblFauloviG9.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(21);
+        }
+        if (Integer.parseInt(jlblFauloviG10.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(22);
+        }
+        if (Integer.parseInt(jlblFauloviG11.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(23);
+        }
+        if (Integer.parseInt(jlblFauloviG12.getText()) == 5) {
+            iskljuciDugmiceZaIzbacenogIgraca(24);
+        }
+
     }
 
     private void iskljuciDugmiceZaIzbacenogIgraca(int rbIgraca) {
         for (int i = (rbIgraca - 1) * 6; i < (rbIgraca - 1) * 6 + 5; i++) {
             opcijeIgraca.get(i).setEnabled(false);
         }
+    }
+
+    private void dodajFaulDomacinu() {
+        bonusDomaci++;
+        if (bonusDomaci > 4) {
+            jlblBonusDomacin.setText("<html><font color='red'>BONUS</font><html>");
+        } else {
+            jlblBonusDomacin.setText("" + bonusDomaci);
+        }
+    }
+
+    private void dodajFaulGostu() {
+        bonusGosti++;
+        if (bonusGosti > 4) {
+            jlblBonusGosti.setText("<html><font color='red'>BONUS</font><html>");
+        } else {
+            jlblBonusGosti.setText("" + bonusGosti);
+        }
+    }
+
+    private void ukljuciDugmicePogresnoIzbacenogIgraca(int rbIgraca) {
+        for (int i = (rbIgraca - 1) * 6; i < (rbIgraca - 1) * 6 + 5; i++) {
+            opcijeIgraca.get(i).setEnabled(true);
+        }
+    }
+
+    private void smanjiFaul(JLabel labela, int i) {
+        if (Integer.parseInt(labela.getText()) == 0) {
+            return;
+        }
+        labela.setText("" + (Integer.parseInt(labela.getText()) - 1));
+        if (Integer.parseInt(labela.getText()) == 4) {
+            ukljuciDugmicePogresnoIzbacenogIgraca(i);
+        }
+
+        if (i < 13) {
+            bonusDomaci--;
+            jlblBonusDomacin.setText("" + bonusDomaci);
+        } else {
+            bonusGosti--;
+            jlblBonusGosti.setText("" + bonusGosti);
+        }
+    }
+
+    private void dodajPoene(int brPoena, boolean tim, JLabel labela) {
+        if(tim) {
+            poeniDomacin+=brPoena;
+            jlblPoeniDomacin.setText(""+poeniDomacin);
+        } else {
+            poeniGost+=brPoena;
+            jlblPoeniGost.setText(""+poeniGost);
+        }
+        labela.setText(""+(Integer.parseInt(labela.getText())+brPoena));
+
     }
 }
