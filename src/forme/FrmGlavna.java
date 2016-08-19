@@ -6,6 +6,8 @@
 package forme;
 
 import domen.Kosarkas;
+import domen.TipUcinka;
+import domen.Ucinak;
 import domen.Utakmica;
 import java.awt.Color;
 import java.awt.Component;
@@ -54,6 +56,9 @@ public class FrmGlavna extends javax.swing.JFrame {
     List<JLabel> labeleG = new ArrayList<>();
     List<JButton> opcijeIgraca = new ArrayList<>();
 
+    List<JLabel> labelePoeni = new ArrayList<>();
+    List<JLabel> labeleFaulovi = new ArrayList<>();
+
     int poeniDomacin = 0;
     int poeniGost = 0;
 
@@ -78,6 +83,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         postaviIkonicu();
         napuniListeSaIgracima();
         srediPaneleIgraca();
+        napuniListeZaPoeneIFaulove();
         jbtnSacuvaj.setVisible(false);
 
     }
@@ -387,10 +393,15 @@ public class FrmGlavna extends javax.swing.JFrame {
 
         jLabel3.setText("jLabel3");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Aplikacija Zapisnički Sto");
         setBackground(new java.awt.Color(102, 102, 255));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setMinimumSize(new java.awt.Dimension(100, 100));
@@ -424,6 +435,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jbtnD1PM.setText("P -1");
+        jbtnD1PM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnD1PMActionPerformed(evt);
+            }
+        });
 
         jbtnD1F1.setText("F +1");
         jbtnD1F1.addActionListener(new java.awt.event.ActionListener() {
@@ -526,6 +542,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton71.setText("P -1");
+        jButton71.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton71ActionPerformed(evt);
+            }
+        });
 
         jButton72.setText("F +1");
         jButton72.addActionListener(new java.awt.event.ActionListener() {
@@ -628,6 +649,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton77.setText("P -1");
+        jButton77.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton77ActionPerformed(evt);
+            }
+        });
 
         jButton78.setText("F +1");
         jButton78.addActionListener(new java.awt.event.ActionListener() {
@@ -730,6 +756,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton155.setText("P -1");
+        jButton155.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton155ActionPerformed(evt);
+            }
+        });
 
         jButton156.setText("F +1");
         jButton156.addActionListener(new java.awt.event.ActionListener() {
@@ -832,6 +863,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton161.setText("P -1");
+        jButton161.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton161ActionPerformed(evt);
+            }
+        });
 
         jButton162.setText("F +1");
         jButton162.addActionListener(new java.awt.event.ActionListener() {
@@ -934,6 +970,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton167.setText("P -1");
+        jButton167.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton167ActionPerformed(evt);
+            }
+        });
 
         jButton168.setText("F +1");
         jButton168.addActionListener(new java.awt.event.ActionListener() {
@@ -1036,6 +1077,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton173.setText("P -1");
+        jButton173.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton173ActionPerformed(evt);
+            }
+        });
 
         jButton174.setText("F +1");
         jButton174.addActionListener(new java.awt.event.ActionListener() {
@@ -1138,6 +1184,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton179.setText("P -1");
+        jButton179.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton179ActionPerformed(evt);
+            }
+        });
 
         jButton180.setText("F +1");
         jButton180.addActionListener(new java.awt.event.ActionListener() {
@@ -1240,6 +1291,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton185.setText("P -1");
+        jButton185.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton185ActionPerformed(evt);
+            }
+        });
 
         jButton186.setText("F +1");
         jButton186.addActionListener(new java.awt.event.ActionListener() {
@@ -1342,6 +1398,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton191.setText("P -1");
+        jButton191.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton191ActionPerformed(evt);
+            }
+        });
 
         jButton192.setText("F +1");
         jButton192.addActionListener(new java.awt.event.ActionListener() {
@@ -1444,6 +1505,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton197.setText("P -1");
+        jButton197.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton197ActionPerformed(evt);
+            }
+        });
 
         jButton198.setText("F +1");
         jButton198.addActionListener(new java.awt.event.ActionListener() {
@@ -1546,6 +1612,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton203.setText("P -1");
+        jButton203.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton203ActionPerformed(evt);
+            }
+        });
 
         jButton204.setText("F +1");
         jButton204.addActionListener(new java.awt.event.ActionListener() {
@@ -1698,6 +1769,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton83.setText("P -1");
+        jButton83.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton83ActionPerformed(evt);
+            }
+        });
 
         jButton84.setText("F +1");
         jButton84.addActionListener(new java.awt.event.ActionListener() {
@@ -1800,6 +1876,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton89.setText("P -1");
+        jButton89.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton89ActionPerformed(evt);
+            }
+        });
 
         jButton90.setText("F +1");
         jButton90.addActionListener(new java.awt.event.ActionListener() {
@@ -1902,6 +1983,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton95.setText("P -1");
+        jButton95.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton95ActionPerformed(evt);
+            }
+        });
 
         jButton96.setText("F +1");
         jButton96.addActionListener(new java.awt.event.ActionListener() {
@@ -2004,6 +2090,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton101.setText("P -1");
+        jButton101.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton101ActionPerformed(evt);
+            }
+        });
 
         jButton102.setText("F +1");
         jButton102.addActionListener(new java.awt.event.ActionListener() {
@@ -2106,6 +2197,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton107.setText("P -1");
+        jButton107.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton107ActionPerformed(evt);
+            }
+        });
 
         jButton108.setText("F +1");
         jButton108.addActionListener(new java.awt.event.ActionListener() {
@@ -2208,6 +2304,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton113.setText("P -1");
+        jButton113.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton113ActionPerformed(evt);
+            }
+        });
 
         jButton114.setText("F +1");
         jButton114.addActionListener(new java.awt.event.ActionListener() {
@@ -2310,6 +2411,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton119.setText("P -1");
+        jButton119.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton119ActionPerformed(evt);
+            }
+        });
 
         jButton120.setText("F +1");
         jButton120.addActionListener(new java.awt.event.ActionListener() {
@@ -2412,6 +2518,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton125.setText("P -1");
+        jButton125.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton125ActionPerformed(evt);
+            }
+        });
 
         jButton126.setText("F +1");
         jButton126.addActionListener(new java.awt.event.ActionListener() {
@@ -2514,6 +2625,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton131.setText("P -1");
+        jButton131.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton131ActionPerformed(evt);
+            }
+        });
 
         jButton132.setText("F +1");
         jButton132.addActionListener(new java.awt.event.ActionListener() {
@@ -2616,6 +2732,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton137.setText("P -1");
+        jButton137.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton137ActionPerformed(evt);
+            }
+        });
 
         jButton138.setText("F +1");
         jButton138.addActionListener(new java.awt.event.ActionListener() {
@@ -2718,6 +2839,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton143.setText("P -1");
+        jButton143.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton143ActionPerformed(evt);
+            }
+        });
 
         jButton144.setText("F +1");
         jButton144.addActionListener(new java.awt.event.ActionListener() {
@@ -2820,6 +2946,11 @@ public class FrmGlavna extends javax.swing.JFrame {
         });
 
         jButton149.setText("P -1");
+        jButton149.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton149ActionPerformed(evt);
+            }
+        });
 
         jButton150.setText("F +1");
         jButton150.addActionListener(new java.awt.event.ActionListener() {
@@ -3226,7 +3357,7 @@ public class FrmGlavna extends javax.swing.JFrame {
             iskljuciDugmice();
             cetvrtina++;
             if (cetvrtina > 4) {
-                jlblCetvrtina.setText("Produžetak " + (cetvrtina-4));
+                jlblCetvrtina.setText("Produžetak " + (cetvrtina - 4));
             } else {
                 jlblCetvrtina.setText("" + cetvrtina);
             }
@@ -3319,7 +3450,41 @@ public class FrmGlavna extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnMinusActionPerformed
 
     private void jbtnSacuvajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSacuvajActionPerformed
-        // TODO add your handling code here:
+        List<Ucinak> listaUcinaka = new ArrayList<>();
+
+        for (int i = 0; i < domaciIgraci.size(); i++) {
+            Ucinak up = new Ucinak(domaciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(i).getText()));
+            listaUcinaka.add(up);
+            Ucinak uf = new Ucinak(domaciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(i).getText()));
+            listaUcinaka.add(uf);
+        }
+
+        for (int i = 0; i < gostujuciIgraci.size(); i++) {
+            Ucinak up = new Ucinak(gostujuciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(12 + i).getText()));
+            listaUcinaka.add(up);
+            Ucinak uf = new Ucinak(gostujuciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(12 + i).getText()));
+            listaUcinaka.add(uf);
+        }
+
+        toZahtev.setOperacija(Konstante.SACUVAJ_LISTU_UCINAKA);
+        toZahtev.setParametar(listaUcinaka);
+        KlijentKomunikacija.getInstance().posaljiZahtev(toZahtev);
+        try {
+            toOdgovor = KlijentKomunikacija.getInstance().primiOdgovor();
+        } catch (IOException | ClassNotFoundException ex) {
+            Logger.getLogger(FrmGlavna.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (toOdgovor.getIzuzetak() != null) {
+            try {
+                throw (Exception) toOdgovor.getIzuzetak();
+            } catch (Exception ex) {
+                Logger.getLogger(FrmGlavna.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        JOptionPane.showMessageDialog(this, "Učinci su uspešno sačuvani!", "Kraj utakmice", JOptionPane.INFORMATION_MESSAGE);
+        jbtnSacuvaj.setVisible(false);
+
     }//GEN-LAST:event_jbtnSacuvajActionPerformed
 
     private void jtxtDomacinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtDomacinActionPerformed
@@ -3763,196 +3928,316 @@ public class FrmGlavna extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton151ActionPerformed
 
     private void jbtnD1P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnD1P2ActionPerformed
-        dodajPoene(2,true, jlblD1Poeni);
+        dodajPoene(2, true, jlblD1Poeni);
     }//GEN-LAST:event_jbtnD1P2ActionPerformed
 
     private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
-        dodajPoene(2,true, jlblD2Poeni);
+        dodajPoene(2, true, jlblD2Poeni);
     }//GEN-LAST:event_jButton69ActionPerformed
 
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
-        dodajPoene(2,true, jlblD3Poeni);
+        dodajPoene(2, true, jlblD3Poeni);
     }//GEN-LAST:event_jButton75ActionPerformed
 
     private void jButton153ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton153ActionPerformed
-        dodajPoene(2,true, jlblD4Poeni);
+        dodajPoene(2, true, jlblD4Poeni);
     }//GEN-LAST:event_jButton153ActionPerformed
 
     private void jButton159ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton159ActionPerformed
-        dodajPoene(2,true, jlblD5Poeni);
+        dodajPoene(2, true, jlblD5Poeni);
     }//GEN-LAST:event_jButton159ActionPerformed
 
     private void jButton165ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton165ActionPerformed
-        dodajPoene(2,true, jlblD6Poeni);
+        dodajPoene(2, true, jlblD6Poeni);
     }//GEN-LAST:event_jButton165ActionPerformed
 
     private void jButton171ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton171ActionPerformed
-        dodajPoene(2,true, jlblD7Poeni);
+        dodajPoene(2, true, jlblD7Poeni);
     }//GEN-LAST:event_jButton171ActionPerformed
 
     private void jButton177ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton177ActionPerformed
-        dodajPoene(2,true, jlblD8Poeni);
+        dodajPoene(2, true, jlblD8Poeni);
     }//GEN-LAST:event_jButton177ActionPerformed
 
     private void jButton183ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton183ActionPerformed
-        dodajPoene(2,true, jlblD9Poeni);
+        dodajPoene(2, true, jlblD9Poeni);
     }//GEN-LAST:event_jButton183ActionPerformed
 
     private void jButton189ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton189ActionPerformed
-        dodajPoene(2,true, jlblD10Poeni);
+        dodajPoene(2, true, jlblD10Poeni);
     }//GEN-LAST:event_jButton189ActionPerformed
 
     private void jButton195ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton195ActionPerformed
-        dodajPoene(2,true, jlblD11Poeni);
+        dodajPoene(2, true, jlblD11Poeni);
     }//GEN-LAST:event_jButton195ActionPerformed
 
     private void jButton201ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton201ActionPerformed
-        dodajPoene(2,true, jlblD12Poeni);
+        dodajPoene(2, true, jlblD12Poeni);
     }//GEN-LAST:event_jButton201ActionPerformed
 
     private void jbtnD1P3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnD1P3ActionPerformed
-        dodajPoene(3,true, jlblD1Poeni);
+        dodajPoene(3, true, jlblD1Poeni);
     }//GEN-LAST:event_jbtnD1P3ActionPerformed
 
     private void jButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton70ActionPerformed
-        dodajPoene(3,true, jlblD2Poeni);
+        dodajPoene(3, true, jlblD2Poeni);
     }//GEN-LAST:event_jButton70ActionPerformed
 
     private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
-        dodajPoene(3,true, jlblD3Poeni);
+        dodajPoene(3, true, jlblD3Poeni);
     }//GEN-LAST:event_jButton76ActionPerformed
 
     private void jButton154ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton154ActionPerformed
-        dodajPoene(3,true, jlblD4Poeni);
+        dodajPoene(3, true, jlblD4Poeni);
     }//GEN-LAST:event_jButton154ActionPerformed
 
     private void jButton160ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton160ActionPerformed
-        dodajPoene(3,true, jlblD5Poeni);
+        dodajPoene(3, true, jlblD5Poeni);
     }//GEN-LAST:event_jButton160ActionPerformed
 
     private void jButton166ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton166ActionPerformed
-        dodajPoene(3,true, jlblD6Poeni);
+        dodajPoene(3, true, jlblD6Poeni);
     }//GEN-LAST:event_jButton166ActionPerformed
 
     private void jButton172ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton172ActionPerformed
-        dodajPoene(3,true, jlblD7Poeni);
+        dodajPoene(3, true, jlblD7Poeni);
     }//GEN-LAST:event_jButton172ActionPerformed
 
     private void jButton178ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton178ActionPerformed
-        dodajPoene(3,true, jlblD8Poeni);
+        dodajPoene(3, true, jlblD8Poeni);
     }//GEN-LAST:event_jButton178ActionPerformed
 
     private void jButton184ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton184ActionPerformed
-        dodajPoene(3,true, jlblD9Poeni);
+        dodajPoene(3, true, jlblD9Poeni);
     }//GEN-LAST:event_jButton184ActionPerformed
 
     private void jButton190ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton190ActionPerformed
-        dodajPoene(3,true, jlblD10Poeni);
+        dodajPoene(3, true, jlblD10Poeni);
     }//GEN-LAST:event_jButton190ActionPerformed
 
     private void jButton196ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton196ActionPerformed
-        dodajPoene(3,true, jlblD11Poeni);
+        dodajPoene(3, true, jlblD11Poeni);
     }//GEN-LAST:event_jButton196ActionPerformed
 
     private void jButton202ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton202ActionPerformed
-        dodajPoene(3,true, jlblD12Poeni);
+        dodajPoene(3, true, jlblD12Poeni);
     }//GEN-LAST:event_jButton202ActionPerformed
 
     private void jButton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton81ActionPerformed
-        dodajPoene(2,false, jlblPoeniG1);
+        dodajPoene(2, false, jlblPoeniG1);
     }//GEN-LAST:event_jButton81ActionPerformed
 
     private void jButton87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton87ActionPerformed
-        dodajPoene(2,false, jlblPoeniG2);
+        dodajPoene(2, false, jlblPoeniG2);
     }//GEN-LAST:event_jButton87ActionPerformed
 
     private void jButton93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton93ActionPerformed
-        dodajPoene(2,false, jlblPoeniG3);
+        dodajPoene(2, false, jlblPoeniG3);
     }//GEN-LAST:event_jButton93ActionPerformed
 
     private void jButton99ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton99ActionPerformed
-        dodajPoene(2,false, jlblPoeniG4);
+        dodajPoene(2, false, jlblPoeniG4);
     }//GEN-LAST:event_jButton99ActionPerformed
 
     private void jButton105ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton105ActionPerformed
-        dodajPoene(2,false, jlblPoeniG5);
+        dodajPoene(2, false, jlblPoeniG5);
     }//GEN-LAST:event_jButton105ActionPerformed
 
     private void jButton111ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton111ActionPerformed
-        dodajPoene(2,false, jlblPoeniG6);
+        dodajPoene(2, false, jlblPoeniG6);
     }//GEN-LAST:event_jButton111ActionPerformed
 
     private void jButton117ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton117ActionPerformed
-        dodajPoene(2,false, jlblPoeniG7);
+        dodajPoene(2, false, jlblPoeniG7);
     }//GEN-LAST:event_jButton117ActionPerformed
 
     private void jButton123ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton123ActionPerformed
-        dodajPoene(2,false, jlblPoeniG8);
+        dodajPoene(2, false, jlblPoeniG8);
     }//GEN-LAST:event_jButton123ActionPerformed
 
     private void jButton129ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton129ActionPerformed
-        dodajPoene(2,false, jlblPoeniG9);
+        dodajPoene(2, false, jlblPoeniG9);
     }//GEN-LAST:event_jButton129ActionPerformed
 
     private void jButton135ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton135ActionPerformed
-        dodajPoene(2,false, jlblPoeniG10);
+        dodajPoene(2, false, jlblPoeniG10);
     }//GEN-LAST:event_jButton135ActionPerformed
 
     private void jButton141ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton141ActionPerformed
-        dodajPoene(2,false, jlblPoeniG11);
+        dodajPoene(2, false, jlblPoeniG11);
     }//GEN-LAST:event_jButton141ActionPerformed
 
     private void jButton147ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton147ActionPerformed
-        dodajPoene(2,false, jlblPoeniG12);
+        dodajPoene(2, false, jlblPoeniG12);
     }//GEN-LAST:event_jButton147ActionPerformed
 
     private void jButton82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton82ActionPerformed
-        dodajPoene(3,false, jlblPoeniG1);
+        dodajPoene(3, false, jlblPoeniG1);
     }//GEN-LAST:event_jButton82ActionPerformed
 
     private void jButton88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton88ActionPerformed
-        dodajPoene(3,false, jlblPoeniG2);
+        dodajPoene(3, false, jlblPoeniG2);
     }//GEN-LAST:event_jButton88ActionPerformed
 
     private void jButton94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton94ActionPerformed
-        dodajPoene(3,false, jlblPoeniG3);
+        dodajPoene(3, false, jlblPoeniG3);
     }//GEN-LAST:event_jButton94ActionPerformed
 
     private void jButton100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton100ActionPerformed
-        dodajPoene(3,false, jlblPoeniG4);
+        dodajPoene(3, false, jlblPoeniG4);
     }//GEN-LAST:event_jButton100ActionPerformed
 
     private void jButton106ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton106ActionPerformed
-        dodajPoene(3,false, jlblPoeniG5);
+        dodajPoene(3, false, jlblPoeniG5);
     }//GEN-LAST:event_jButton106ActionPerformed
 
     private void jButton112ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton112ActionPerformed
-        dodajPoene(3,false, jlblPoeniG6);
+        dodajPoene(3, false, jlblPoeniG6);
     }//GEN-LAST:event_jButton112ActionPerformed
 
     private void jButton118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton118ActionPerformed
-        dodajPoene(3,false, jlblPoeniG7);
+        dodajPoene(3, false, jlblPoeniG7);
     }//GEN-LAST:event_jButton118ActionPerformed
 
     private void jButton124ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton124ActionPerformed
-        dodajPoene(3,false, jlblPoeniG8);
+        dodajPoene(3, false, jlblPoeniG8);
     }//GEN-LAST:event_jButton124ActionPerformed
 
     private void jButton130ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton130ActionPerformed
-        dodajPoene(3,false, jlblPoeniG9);
+        dodajPoene(3, false, jlblPoeniG9);
     }//GEN-LAST:event_jButton130ActionPerformed
 
     private void jButton136ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton136ActionPerformed
-        dodajPoene(3,false, jlblPoeniG10);
+        dodajPoene(3, false, jlblPoeniG10);
     }//GEN-LAST:event_jButton136ActionPerformed
 
     private void jButton142ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton142ActionPerformed
-        dodajPoene(3,false, jlblPoeniG11);
+        dodajPoene(3, false, jlblPoeniG11);
     }//GEN-LAST:event_jButton142ActionPerformed
 
     private void jButton148ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton148ActionPerformed
-        dodajPoene(3,false, jlblPoeniG12);
+        dodajPoene(3, false, jlblPoeniG12);
     }//GEN-LAST:event_jButton148ActionPerformed
+
+    private void jbtnD1PMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnD1PMActionPerformed
+        smanjiPoene(true, jlblD1Poeni);
+    }//GEN-LAST:event_jbtnD1PMActionPerformed
+
+    private void jButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton71ActionPerformed
+        smanjiPoene(true, jlblD2Poeni);
+    }//GEN-LAST:event_jButton71ActionPerformed
+
+    private void jButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton77ActionPerformed
+        smanjiPoene(true, jlblD3Poeni);
+    }//GEN-LAST:event_jButton77ActionPerformed
+
+    private void jButton155ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton155ActionPerformed
+        smanjiPoene(true, jlblD4Poeni);
+    }//GEN-LAST:event_jButton155ActionPerformed
+
+    private void jButton161ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton161ActionPerformed
+        smanjiPoene(true, jlblD5Poeni);
+    }//GEN-LAST:event_jButton161ActionPerformed
+
+    private void jButton167ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton167ActionPerformed
+        smanjiPoene(true, jlblD6Poeni);
+    }//GEN-LAST:event_jButton167ActionPerformed
+
+    private void jButton173ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton173ActionPerformed
+        smanjiPoene(true, jlblD7Poeni);
+    }//GEN-LAST:event_jButton173ActionPerformed
+
+    private void jButton179ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton179ActionPerformed
+        smanjiPoene(true, jlblD8Poeni);
+    }//GEN-LAST:event_jButton179ActionPerformed
+
+    private void jButton185ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton185ActionPerformed
+        smanjiPoene(true, jlblD9Poeni);
+    }//GEN-LAST:event_jButton185ActionPerformed
+
+    private void jButton191ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton191ActionPerformed
+        smanjiPoene(true, jlblD10Poeni);
+    }//GEN-LAST:event_jButton191ActionPerformed
+
+    private void jButton197ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton197ActionPerformed
+        smanjiPoene(true, jlblD11Poeni);
+    }//GEN-LAST:event_jButton197ActionPerformed
+
+    private void jButton203ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton203ActionPerformed
+        smanjiPoene(true, jlblD12Poeni);
+    }//GEN-LAST:event_jButton203ActionPerformed
+
+    private void jButton83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton83ActionPerformed
+        smanjiPoene(false, jlblPoeniG1);
+    }//GEN-LAST:event_jButton83ActionPerformed
+
+    private void jButton89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton89ActionPerformed
+        smanjiPoene(false, jlblPoeniG2);
+    }//GEN-LAST:event_jButton89ActionPerformed
+
+    private void jButton95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton95ActionPerformed
+        smanjiPoene(false, jlblPoeniG3);
+    }//GEN-LAST:event_jButton95ActionPerformed
+
+    private void jButton101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton101ActionPerformed
+        smanjiPoene(false, jlblPoeniG4);
+    }//GEN-LAST:event_jButton101ActionPerformed
+
+    private void jButton107ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton107ActionPerformed
+        smanjiPoene(false, jlblPoeniG5);
+    }//GEN-LAST:event_jButton107ActionPerformed
+
+    private void jButton113ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton113ActionPerformed
+        smanjiPoene(false, jlblPoeniG6);
+    }//GEN-LAST:event_jButton113ActionPerformed
+
+    private void jButton119ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton119ActionPerformed
+        smanjiPoene(false, jlblPoeniG7);
+    }//GEN-LAST:event_jButton119ActionPerformed
+
+    private void jButton125ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton125ActionPerformed
+        smanjiPoene(false, jlblPoeniG8);
+    }//GEN-LAST:event_jButton125ActionPerformed
+
+    private void jButton131ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton131ActionPerformed
+        smanjiPoene(false, jlblPoeniG9);
+    }//GEN-LAST:event_jButton131ActionPerformed
+
+    private void jButton137ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton137ActionPerformed
+        smanjiPoene(false, jlblPoeniG10);
+    }//GEN-LAST:event_jButton137ActionPerformed
+
+    private void jButton143ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton143ActionPerformed
+        smanjiPoene(false, jlblPoeniG11);
+    }//GEN-LAST:event_jButton143ActionPerformed
+
+    private void jButton149ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton149ActionPerformed
+        smanjiPoene(false, jlblPoeniG12);
+    }//GEN-LAST:event_jButton149ActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        int odluka = JOptionPane.showConfirmDialog(this, "Da li zaista želite da napustite program?", "Izlaz", JOptionPane.YES_NO_OPTION);
+        if (odluka == 0) {
+            toZahtev.setOperacija(Konstante.IZLOGUJ_SE);
+            toZahtev.setParametar(null);
+            KlijentKomunikacija.getInstance().posaljiZahtev(toZahtev);
+            try {
+                toOdgovor = KlijentKomunikacija.getInstance().primiOdgovor();
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(FrmGlavna.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            if (toOdgovor.getIzuzetak() != null) {
+                try {
+                    throw (Exception) toOdgovor.getIzuzetak();
+                } catch (Exception ex) {
+                    Logger.getLogger(FrmGlavna.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            System.exit(0);
+        } else {
+            return;
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -4633,6 +4918,7 @@ public class FrmGlavna extends javax.swing.JFrame {
 
     private void smanjiFaul(JLabel labela, int i) {
         if (Integer.parseInt(labela.getText()) == 0) {
+            JOptionPane.showMessageDialog(this, "Nedozvoljena akcija, broj faulova ne može biti negativan!", "Greška", JOptionPane.WARNING_MESSAGE);
             return;
         }
         labela.setText("" + (Integer.parseInt(labela.getText()) - 1));
@@ -4650,14 +4936,84 @@ public class FrmGlavna extends javax.swing.JFrame {
     }
 
     private void dodajPoene(int brPoena, boolean tim, JLabel labela) {
-        if(tim) {
-            poeniDomacin+=brPoena;
-            jlblPoeniDomacin.setText(""+poeniDomacin);
+        if (tim) {
+            poeniDomacin += brPoena;
+            jlblPoeniDomacin.setText("" + poeniDomacin);
         } else {
-            poeniGost+=brPoena;
-            jlblPoeniGost.setText(""+poeniGost);
+            poeniGost += brPoena;
+            jlblPoeniGost.setText("" + poeniGost);
         }
-        labela.setText(""+(Integer.parseInt(labela.getText())+brPoena));
+        labela.setText("" + (Integer.parseInt(labela.getText()) + brPoena));
 
+    }
+
+    private void smanjiPoene(boolean tim, JLabel labela) {
+        if (tim && poeniDomacin > 0 && Integer.parseInt(labela.getText()) > 0) {
+            poeniDomacin--;
+            jlblPoeniDomacin.setText("" + poeniDomacin);
+            labela.setText("" + (Integer.parseInt(labela.getText()) - 1));
+            return;
+        }
+
+        if (!tim && poeniGost > 0 && Integer.parseInt(labela.getText()) > 0) {
+            poeniGost--;
+            jlblPoeniGost.setText("" + poeniDomacin);
+            labela.setText("" + (Integer.parseInt(labela.getText()) - 1));
+            return;
+        }
+
+        JOptionPane.showMessageDialog(this, "Nedozvoljena akcija, broj poena igrača je već minimalan!", "Greška", JOptionPane.WARNING_MESSAGE);
+    }
+
+    private void napuniListeZaPoeneIFaulove() {
+        labelePoeni.add(jlblD1Poeni);
+        labelePoeni.add(jlblD2Poeni);
+        labelePoeni.add(jlblD3Poeni);
+        labelePoeni.add(jlblD4Poeni);
+        labelePoeni.add(jlblD5Poeni);
+        labelePoeni.add(jlblD6Poeni);
+        labelePoeni.add(jlblD7Poeni);
+        labelePoeni.add(jlblD8Poeni);
+        labelePoeni.add(jlblD9Poeni);
+        labelePoeni.add(jlblD10Poeni);
+        labelePoeni.add(jlblD11Poeni);
+        labelePoeni.add(jlblD12Poeni);
+        labelePoeni.add(jlblPoeniG1);
+        labelePoeni.add(jlblPoeniG2);
+        labelePoeni.add(jlblPoeniG3);
+        labelePoeni.add(jlblPoeniG4);
+        labelePoeni.add(jlblPoeniG5);
+        labelePoeni.add(jlblPoeniG6);
+        labelePoeni.add(jlblPoeniG7);
+        labelePoeni.add(jlblPoeniG8);
+        labelePoeni.add(jlblPoeniG9);
+        labelePoeni.add(jlblPoeniG10);
+        labelePoeni.add(jlblPoeniG11);
+        labelePoeni.add(jlblPoeniG12);
+
+        labeleFaulovi.add(jlblD1Faulovi);
+        labeleFaulovi.add(jlblD2Faulovi);
+        labeleFaulovi.add(jlblD3Faulovi);
+        labeleFaulovi.add(jlblD4Faulovi);
+        labeleFaulovi.add(jlblD5Faulovi);
+        labeleFaulovi.add(jlblD6Faulovi);
+        labeleFaulovi.add(jlblD7Faulovi);
+        labeleFaulovi.add(jlblD8Faulovi);
+        labeleFaulovi.add(jlblD9Faulovi);
+        labeleFaulovi.add(jlblD10Faulovi);
+        labeleFaulovi.add(jlblD11Faulovi);
+        labeleFaulovi.add(jlblD12Faulovi);
+        labeleFaulovi.add(jlblFauloviG1);
+        labeleFaulovi.add(jlblFauloviG2);
+        labeleFaulovi.add(jlblFauloviG3);
+        labeleFaulovi.add(jlblFauloviG4);
+        labeleFaulovi.add(jlblFauloviG5);
+        labeleFaulovi.add(jlblFauloviG6);
+        labeleFaulovi.add(jlblFauloviG7);
+        labeleFaulovi.add(jlblFauloviG8);
+        labeleFaulovi.add(jlblFauloviG9);
+        labeleFaulovi.add(jlblFauloviG10);
+        labeleFaulovi.add(jlblFauloviG11);
+        labeleFaulovi.add(jlblFauloviG12);
     }
 }
