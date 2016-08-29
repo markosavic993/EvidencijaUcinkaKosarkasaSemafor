@@ -5,6 +5,7 @@
  */
 package forme;
 
+import domen.Korisnik;
 import domen.Kosarkas;
 import domen.TipUcinka;
 import domen.Ucinak;
@@ -40,6 +41,8 @@ import util.Konstante;
  */
 public class FrmGlavna extends javax.swing.JFrame {
 
+    Korisnik korisnik;
+    
     Utakmica utakmica;
     Timer timer;
     boolean krajUtakmice = false;
@@ -78,6 +81,7 @@ public class FrmGlavna extends javax.swing.JFrame {
         maksimizirajDimenzijeForme();
         inicijalizujTajmer();
         this.utakmica = utakmica;
+        this.korisnik = new Korisnik("semafor", "semafor");
         popuniCentar();
         podesiBoje();
         postaviIkonicu();
@@ -3453,16 +3457,16 @@ public class FrmGlavna extends javax.swing.JFrame {
         List<Ucinak> listaUcinaka = new ArrayList<>();
 
         for (int i = 0; i < domaciIgraci.size(); i++) {
-            Ucinak up = new Ucinak(domaciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(i).getText()));
+            Ucinak up = new Ucinak(domaciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(i).getText()), korisnik);
             listaUcinaka.add(up);
-            Ucinak uf = new Ucinak(domaciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(i).getText()));
+            Ucinak uf = new Ucinak(domaciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(i).getText()), korisnik);
             listaUcinaka.add(uf);
         }
 
         for (int i = 0; i < gostujuciIgraci.size(); i++) {
-            Ucinak up = new Ucinak(gostujuciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(12 + i).getText()));
+            Ucinak up = new Ucinak(gostujuciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(12 + i).getText()),korisnik);
             listaUcinaka.add(up);
-            Ucinak uf = new Ucinak(gostujuciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(12 + i).getText()));
+            Ucinak uf = new Ucinak(gostujuciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(12 + i).getText()), korisnik);
             listaUcinaka.add(uf);
         }
 
@@ -4573,7 +4577,7 @@ public class FrmGlavna extends javax.swing.JFrame {
     private void maksimizirajDimenzijeForme() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         jScrollPane1.setBounds(new Rectangle(JFrame.MAXIMIZED_HORIZ, JFrame.MAXIMIZED_VERT));
-        //this.pack();
+        this.pack();
     }
 
     private void popuniCentar() {
