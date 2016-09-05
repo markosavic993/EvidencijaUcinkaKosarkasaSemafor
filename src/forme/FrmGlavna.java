@@ -8,7 +8,7 @@ package forme;
 import domen.Korisnik;
 import domen.Kosarkas;
 import domen.TipUcinka;
-import domen.Ucinak;
+import domen.UcinakKosarkasa;
 import domen.Utakmica;
 import java.awt.Color;
 import java.awt.Component;
@@ -3454,19 +3454,19 @@ public class FrmGlavna extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnMinusActionPerformed
 
     private void jbtnSacuvajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSacuvajActionPerformed
-        List<Ucinak> listaUcinaka = new ArrayList<>();
+        List<UcinakKosarkasa> listaUcinaka = new ArrayList<>();
 
         for (int i = 0; i < domaciIgraci.size(); i++) {
-            Ucinak up = new Ucinak(domaciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(i).getText()), korisnik);
+            UcinakKosarkasa up = new UcinakKosarkasa(domaciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(i).getText()), korisnik);
             listaUcinaka.add(up);
-            Ucinak uf = new Ucinak(domaciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(i).getText()), korisnik);
+            UcinakKosarkasa uf = new UcinakKosarkasa(domaciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(i).getText()), korisnik);
             listaUcinaka.add(uf);
         }
 
         for (int i = 0; i < gostujuciIgraci.size(); i++) {
-            Ucinak up = new Ucinak(gostujuciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(12 + i).getText()),korisnik);
+            UcinakKosarkasa up = new UcinakKosarkasa(gostujuciIgraci.get(i), utakmica, new TipUcinka("Poeni", null), Integer.parseInt(labelePoeni.get(12 + i).getText()),korisnik);
             listaUcinaka.add(up);
-            Ucinak uf = new Ucinak(gostujuciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(12 + i).getText()), korisnik);
+            UcinakKosarkasa uf = new UcinakKosarkasa(gostujuciIgraci.get(i), utakmica, new TipUcinka("Faulovi", null), Integer.parseInt(labeleFaulovi.get(12 + i).getText()), korisnik);
             listaUcinaka.add(uf);
         }
 
